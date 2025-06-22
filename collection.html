@@ -1,0 +1,146 @@
+<div class="collection-container">
+    <div class="form-section">
+        <h2>Book E-Waste Collection</h2>
+        <p class="section-description">Schedule a pickup for your electronic waste. Our certified collectors will come to your location.</p>
+        
+        <form class="collection-form" id="collectionForm">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Complete Address *</label>
+                <textarea id="address" name="address" rows="3" required placeholder="House/Flat No., Street, Area, City, State, PIN Code"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <select id="city" name="city" required>
+                        <option value="">Select City</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">PIN Code *</label>
+                    <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="deviceTypes">Device Types *</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="smartphones">
+                        <span class="checkmark"></span>
+                        Smartphones & Tablets
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="laptops">
+                        <span class="checkmark"></span>
+                        Laptops & Computers
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="appliances">
+                        <span class="checkmark"></span>
+                        Home Appliances
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="accessories">
+                        <span class="checkmark"></span>
+                        Accessories & Cables
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="batteries">
+                        <span class="checkmark"></span>
+                        Batteries
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="devices" value="other">
+                        <span class="checkmark"></span>
+                        Other Electronics
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Estimated Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Number of items">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="preferredDate">Preferred Date *</label>
+                    <input type="date" id="preferredDate" name="preferredDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferredTime">Preferred Time *</label>
+                    <select id="preferredTime" name="preferredTime" required>
+                        <option value="">Select Time Slot</option>
+                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                        <option value="evening">Evening (4 PM - 7 PM)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="specialInstructions">Special Instructions</label>
+                <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Any specific instructions for the collection team..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-calendar-check"></i>
+                    Schedule Collection
+                </button>
+                <button type="reset" class="btn-secondary">
+                    <i class="fas fa-undo"></i>
+                    Reset Form
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="info-section">
+        <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> Collection Guidelines</h3>
+            <ul>
+                <li>Ensure devices are powered off and disconnected</li>
+                <li>Remove personal data and factory reset devices</li>
+                <li>Keep original chargers and accessories together</li>
+                <li>Separate batteries if removable</li>
+                <li>Collection is free for quantities above 5 items</li>
+            </ul>
+        </div>
+        
+        <div class="info-card">
+            <h3><i class="fas fa-shield-alt"></i> Data Security</h3>
+            <p>We ensure complete data destruction following international standards. All devices undergo certified data wiping processes before recycling.</p>
+        </div>
+        
+        <div class="info-card">
+            <h3><i class="fas fa-certificate"></i> Certification</h3>
+            <p>Receive a digital certificate for your contribution to environmental sustainability and e-waste reduction.</p>
+        </div>
+    </div>
+</div>

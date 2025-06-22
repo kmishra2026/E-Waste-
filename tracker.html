@@ -1,0 +1,291 @@
+<div class="tracker-container">
+    <div class="tracker-header">
+        <h2>Device Lifecycle Tracker</h2>
+        <p class="section-description">Track your electronic devices from purchase to responsible disposal</p>
+        <button class="btn-primary" onclick="showAddDeviceModal()">
+            <i class="fas fa-plus"></i> Add New Device
+        </button>
+    </div>
+    
+    <div class="devices-grid">
+        <div class="device-card active">
+            <div class="device-header">
+                <div class="device-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="device-info">
+                    <h3>iPhone 13 Pro</h3>
+                    <p class="device-model">Apple • 128GB • Space Gray</p>
+                </div>
+                <div class="device-status active">
+                    <span>Active</span>
+                </div>
+            </div>
+            
+            <div class="device-details">
+                <div class="detail-row">
+                    <span class="detail-label">Purchase Date:</span>
+                    <span class="detail-value">March 15, 2022</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Age:</span>
+                    <span class="detail-value">1 year 9 months</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Condition:</span>
+                    <span class="detail-value">Good</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Estimated Value:</span>
+                    <span class="detail-value">₹45,000</span>
+                </div>
+            </div>
+            
+            <div class="lifecycle-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <div class="lifecycle-stages">
+                    <span class="stage completed">Purchase</span>
+                    <span class="stage completed">Active Use</span>
+                    <span class="stage current">Maintenance</span>
+                    <span class="stage">Disposal</span>
+                </div>
+            </div>
+            
+            <div class="device-actions">
+                <button class="btn-secondary" onclick="updateDevice('iphone13')">
+                    <i class="fas fa-edit"></i> Update
+                </button>
+                <button class="btn-tertiary" onclick="scheduleDisposal('iphone13')">
+                    <i class="fas fa-recycle"></i> Schedule Disposal
+                </button>
+            </div>
+        </div>
+        
+        <div class="device-card disposed">
+            <div class="device-header">
+                <div class="device-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="device-info">
+                    <h3>Dell Inspiron 15</h3>
+                    <p class="device-model">Dell • Intel i5 • 8GB RAM</p>
+                </div>
+                <div class="device-status disposed">
+                    <span>Recycled</span>
+                </div>
+            </div>
+            
+            <div class="device-details">
+                <div class="detail-row">
+                    <span class="detail-label">Purchase Date:</span>
+                    <span class="detail-value">June 10, 2019</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Disposal Date:</span>
+                    <span class="detail-value">November 22, 2023</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Recycling Center:</span>
+                    <span class="detail-value">Green Tech Recyclers</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Certificate ID:</span>
+                    <span class="detail-value">GTR-2023-1122-001</span>
+                </div>
+            </div>
+            
+            <div class="lifecycle-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill completed" style="width: 100%"></div>
+                </div>
+                <div class="lifecycle-stages">
+                    <span class="stage completed">Purchase</span>
+                    <span class="stage completed">Active Use</span>
+                    <span class="stage completed">Maintenance</span>
+                    <span class="stage completed">Disposal</span>
+                </div>
+            </div>
+            
+            <div class="device-actions">
+                <button class="btn-secondary" onclick="viewCertificate('dell-inspiron')">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </button>
+            </div>
+        </div>
+        
+        <div class="device-card maintenance">
+            <div class="device-header">
+                <div class="device-icon">
+                    <i class="fas fa-tablet-alt"></i>
+                </div>
+                <div class="device-info">
+                    <h3>Samsung Galaxy Tab S7</h3>
+                    <p class="device-model">Samsung • 256GB • Mystic Silver</p>
+                </div>
+                <div class="device-status maintenance">
+                    <span>Needs Attention</span>
+                </div>
+            </div>
+            
+            <div class="device-details">
+                <div class="detail-row">
+                    <span class="detail-label">Purchase Date:</span>
+                    <span class="detail-value">August 5, 2021</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Age:</span>
+                    <span class="detail-value">2 years 4 months</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Issue:</span>
+                    <span class="detail-value">Battery degradation</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Estimated Value:</span>
+                    <span class="detail-value">₹25,000</span>
+                </div>
+            </div>
+            
+            <div class="lifecycle-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill warning" style="width: 75%"></div>
+                </div>
+                <div class="lifecycle-stages">
+                    <span class="stage completed">Purchase</span>
+                    <span class="stage completed">Active Use</span>
+                    <span class="stage current warning">Maintenance</span>
+                    <span class="stage">Disposal</span>
+                </div>
+            </div>
+            
+            <div class="device-actions">
+                <button class="btn-primary" onclick="repairDevice('galaxy-tab')">
+                    <i class="fas fa-wrench"></i> Find Repair
+                </button>
+                <button class="btn-tertiary" onclick="scheduleDisposal('galaxy-tab')">
+                    <i class="fas fa-recycle"></i> Consider Disposal
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tracker-stats">
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="stat-info">
+                <h3>12</h3>
+                <p>Total Devices Tracked</p>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-recycle"></i>
+            </div>
+            <div class="stat-info">
+                <h3>5</h3>
+                <p>Successfully Recycled</p>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div class="stat-info">
+                <h3>2.3 tons</h3>
+                <p>CO₂ Emissions Saved</p>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon">
+                <i class="fas fa-rupee-sign"></i>
+            </div>
+            <div class="stat-info">
+                <h3>₹1,25,000</h3>
+                <p>Total Device Value</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Device Modal -->
+<div class="modal" id="addDeviceModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Add New Device</h3>
+            <button class="modal-close" onclick="closeAddDeviceModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <form class="device-form" id="addDeviceForm">
+            <div class="form-group">
+                <label for="deviceType">Device Type *</label>
+                <select id="deviceType" name="deviceType" required>
+                    <option value="">Select Device Type</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="desktop">Desktop Computer</option>
+                    <option value="tv">Television</option>
+                    <option value="appliance">Home Appliance</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="deviceBrand">Brand *</label>
+                    <input type="text" id="deviceBrand" name="deviceBrand" required>
+                </div>
+                <div class="form-group">
+                    <label for="deviceModel">Model *</label>
+                    <input type="text" id="deviceModel" name="deviceModel" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="purchaseDate">Purchase Date *</label>
+                    <input type="date" id="purchaseDate" name="purchaseDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="purchasePrice">Purchase Price (₹)</label>
+                    <input type="number" id="purchasePrice" name="purchasePrice" min="0">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="deviceCondition">Current Condition *</label>
+                <select id="deviceCondition" name="deviceCondition" required>
+                    <option value="">Select Condition</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                    <option value="not-working">Not Working</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="deviceNotes">Additional Notes</label>
+                <textarea id="deviceNotes" name="deviceNotes" rows="3" placeholder="Any additional information about the device..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Device
+                </button>
+                <button type="button" class="btn-secondary" onclick="closeAddDeviceModal()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

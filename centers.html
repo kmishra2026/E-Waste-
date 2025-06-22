@@ -1,0 +1,157 @@
+<div class="centers-container">
+    <div class="search-section">
+        <h2>Find Recycling Centers</h2>
+        <p class="section-description">Locate authorized e-waste recycling centers near you across India</p>
+        
+        <div class="search-bar">
+            <div class="search-input-group">
+                <i class="fas fa-search"></i>
+                <input type="text" id="locationSearch" placeholder="Enter city, state, or PIN code">
+                <button class="search-btn" onclick="searchCenters()">Search</button>
+            </div>
+        </div>
+        
+        <div class="filter-options">
+            <div class="filter-group">
+                <label>Filter by Services:</label>
+                <div class="filter-checkboxes">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="pickup" checked>
+                        <span>Home Pickup</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="dropoff" checked>
+                        <span>Drop-off</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" value="certified" checked>
+                        <span>Certified Only</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="centers-content">
+        <div class="centers-list">
+            <div class="center-card">
+                <div class="center-header">
+                    <h3>Green Tech Recyclers</h3>
+                    <div class="center-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.8 (124 reviews)</span>
+                    </div>
+                </div>
+                <div class="center-details">
+                    <p class="center-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Plot No. 45, Industrial Area, Andheri East, Mumbai - 400069
+                    </p>
+                    <p class="center-phone">
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </p>
+                    <div class="center-services">
+                        <span class="service-tag">Home Pickup</span>
+                        <span class="service-tag">Data Destruction</span>
+                        <span class="service-tag">Certified</span>
+                    </div>
+                    <div class="center-hours">
+                        <i class="fas fa-clock"></i>
+                        Mon-Sat: 9:00 AM - 6:00 PM
+                    </div>
+                </div>
+                <div class="center-actions">
+                    <button class="btn-primary" onclick="contactCenter('green-tech')">
+                        <i class="fas fa-phone"></i> Contact
+                    </button>
+                    <button class="btn-secondary" onclick="getDirections('green-tech')">
+                        <i class="fas fa-directions"></i> Directions
+                    </button>
+                </div>
+            </div>
+            
+            <div class="center-card">
+                <div class="center-header">
+                    <h3>EcoWaste Solutions</h3>
+                    <div class="center-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.5 (89 reviews)</span>
+                    </div>
+                </div>
+                <div class="center-details">
+                    <p class="center-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Sector 18, Noida, Uttar Pradesh - 201301
+                    </p>
+                    <p class="center-phone">
+                        <i class="fas fa-phone"></i>
+                        +91 87654 32109
+                    </p>
+                    <div class="center-services">
+                        <span class="service-tag">Drop-off</span>
+                        <span class="service-tag">Bulk Processing</span>
+                        <span class="service-tag">Certified</span>
+                    </div>
+                    <div class="center-hours">
+                        <i class="fas fa-clock"></i>
+                        Mon-Fri: 8:00 AM - 5:00 PM
+                    </div>
+                </div>
+                <div class="center-actions">
+                    <button class="btn-primary" onclick="contactCenter('ecowaste')">
+                        <i class="fas fa-phone"></i> Contact
+                    </button>
+                    <button class="btn-secondary" onclick="getDirections('ecowaste')">
+                        <i class="fas fa-directions"></i> Directions
+                    </button>
+                </div>
+            </div>
+            
+            <div class="center-card">
+                <div class="center-header">
+                    <h3>Bangalore E-Waste Hub</h3>
+                    <div class="center-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9 (156 reviews)</span>
+                    </div>
+                </div>
+                <div class="center-details">
+                    <p class="center-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Electronic City Phase 1, Bangalore - 560100
+                    </p>
+                    <p class="center-phone">
+                        <i class="fas fa-phone"></i>
+                        +91 76543 21098
+                    </p>
+                    <div class="center-services">
+                        <span class="service-tag">Home Pickup</span>
+                        <span class="service-tag">Corporate Services</span>
+                        <span class="service-tag">Certified</span>
+                    </div>
+                    <div class="center-hours">
+                        <i class="fas fa-clock"></i>
+                        Mon-Sat: 9:00 AM - 7:00 PM
+                    </div>
+                </div>
+                <div class="center-actions">
+                    <button class="btn-primary" onclick="contactCenter('bangalore-hub')">
+                        <i class="fas fa-phone"></i> Contact
+                    </button>
+                    <button class="btn-secondary" onclick="getDirections('bangalore-hub')">
+                        <i class="fas fa-directions"></i> Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-section">
+            <div class="map-placeholder">
+                <i class="fas fa-map"></i>
+                <p>Interactive Map</p>
+                <p class="map-note">Map showing recycling centers in your area</p>
+            </div>
+        </div>
+    </div>
+</div>

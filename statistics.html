@@ -1,0 +1,264 @@
+<div class="statistics-container">
+    <div class="stats-header">
+        <h2>E-Waste Statistics & Impact</h2>
+        <p class="section-description">Track the collective impact of e-waste management efforts across India</p>
+        
+        <div class="time-filter">
+            <button class="filter-btn active" onclick="filterStats('week')">This Week</button>
+            <button class="filter-btn" onclick="filterStats('month')">This Month</button>
+            <button class="filter-btn" onclick="filterStats('year')">This Year</button>
+            <button class="filter-btn" onclick="filterStats('all')">All Time</button>
+        </div>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card large">
+            <div class="stat-header">
+                <h3>Total E-Waste Processed</h3>
+                <i class="fas fa-recycle"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">2,450.5</span>
+                <span class="unit">Metric Tons</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+12.5% from last month</span>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3>CO₂ Emissions Saved</h3>
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">15.2</span>
+                <span class="unit">Tons</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+8.3%</span>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3>Devices Recycled</h3>
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">12,345</span>
+                <span class="unit">Units</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+15.7%</span>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3>Active Users</h3>
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">8,967</span>
+                <span class="unit">People</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+22.1%</span>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3>Collections Completed</h3>
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">1,456</span>
+                <span class="unit">Pickups</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+9.8%</span>
+            </div>
+        </div>
+        
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3>Revenue Generated</h3>
+                <i class="fas fa-rupee-sign"></i>
+            </div>
+            <div class="stat-value">
+                <span class="number">₹45.6</span>
+                <span class="unit">Lakhs</span>
+            </div>
+            <div class="stat-change positive">
+                <i class="fas fa-arrow-up"></i>
+                <span>+18.4%</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="charts-section">
+        <div class="chart-container">
+            <div class="chart-header">
+                <h3>Monthly E-Waste Collection Trend</h3>
+                <div class="chart-controls">
+                    <select id="chartType">
+                        <option value="line">Line Chart</option>
+                        <option value="bar">Bar Chart</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-placeholder">
+                <canvas id="trendChart" width="800" height="400"></canvas>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-header">
+                <h3>Device Type Distribution</h3>
+            </div>
+            <div class="chart-placeholder">
+                <div class="pie-chart">
+                    <div class="pie-segment" style="--percentage: 35; --color: #4CAF50;">
+                        <span class="pie-label">Smartphones<br>35%</span>
+                    </div>
+                    <div class="pie-segment" style="--percentage: 25; --color: #2196F3;">
+                        <span class="pie-label">Laptops<br>25%</span>
+                    </div>
+                    <div class="pie-segment" style="--percentage: 20; --color: #FF9800;">
+                        <span class="pie-label">Appliances<br>20%</span>
+                    </div>
+                    <div class="pie-segment" style="--percentage: 20; --color: #9C27B0;">
+                        <span class="pie-label">Others<br>20%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="regional-stats">
+        <h3>State-wise E-Waste Statistics</h3>
+        <div class="state-stats-grid">
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>Maharashtra</h4>
+                    <p>Mumbai, Pune, Nagpur</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">456.2 MT</span>
+                    <span class="state-percentage">18.6%</span>
+                </div>
+            </div>
+            
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>Karnataka</h4>
+                    <p>Bangalore, Mysore</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">389.7 MT</span>
+                    <span class="state-percentage">15.9%</span>
+                </div>
+            </div>
+            
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>Tamil Nadu</h4>
+                    <p>Chennai, Coimbatore</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">342.1 MT</span>
+                    <span class="state-percentage">14.0%</span>
+                </div>
+            </div>
+            
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>Delhi NCR</h4>
+                    <p>Delhi, Gurgaon, Noida</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">298.5 MT</span>
+                    <span class="state-percentage">12.2%</span>
+                </div>
+            </div>
+            
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>West Bengal</h4>
+                    <p>Kolkata, Durgapur</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">234.8 MT</span>
+                    <span class="state-percentage">9.6%</span>
+                </div>
+            </div>
+            
+            <div class="state-stat">
+                <div class="state-info">
+                    <h4>Others</h4>
+                    <p>Remaining states</p>
+                </div>
+                <div class="state-numbers">
+                    <span class="state-value">729.2 MT</span>
+                    <span class="state-percentage">29.7%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="impact-metrics">
+        <h3>Environmental Impact Metrics</h3>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="metric-info">
+                    <h4>Trees Equivalent Saved</h4>
+                    <p class="metric-value">2,340 trees</p>
+                    <p class="metric-description">Based on CO₂ absorption capacity</p>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="metric-info">
+                    <h4>Water Saved</h4>
+                    <p class="metric-value">1.2M liters</p>
+                    <p class="metric-description">Water conservation through recycling</p>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="metric-info">
+                    <h4>Energy Saved</h4>
+                    <p class="metric-value">45,600 kWh</p>
+                    <p class="metric-description">Energy conservation vs. new production</p>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <div class="metric-info">
+                    <h4>Landfill Waste Diverted</h4>
+                    <p class="metric-value">2,450 MT</p>
+                    <p class="metric-description">Prevented from reaching landfills</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

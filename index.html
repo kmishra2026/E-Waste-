@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Waste Bharat - Sustainable Electronics Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>E-Waste Bharat</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <a href="#" onclick="loadPage('dashboard')" class="menu-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('collection')" class="menu-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Book Collection</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('centers')" class="menu-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Recycling Centers</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('tracker')" class="menu-link">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Device Tracker</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('education')" class="menu-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learn</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('statistics')" class="menu-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Statistics</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" onclick="loadPage('profile')" class="menu-link">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <p class="header-subtitle">Sustainable Electronics Management for India</p>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content" id="mainContent">
+                <!-- Dashboard Content -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,450 kg</h3>
+                            <p>E-Waste Recycled</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Devices Tracked</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>89</h3>
+                            <p>Collections Booked</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon red">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15.2 tons</h3>
+                            <p>CO₂ Saved</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="recent-activity">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Collection Completed</strong></p>
+                                    <p>5 devices collected from Mumbai, Maharashtra</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>New Device Added</strong></p>
+                                    <p>iPhone 12 added to device tracker</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Recycling Completed</strong></p>
+                                    <p>Old laptop successfully recycled</p>
+                                    <span class="activity-time">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h2>Quick Actions</h2>
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="loadPage('collection')">
+                                <i class="fas fa-truck"></i>
+                                Book Collection
+                            </button>
+                            <button class="action-btn secondary" onclick="loadPage('tracker')">
+                                <i class="fas fa-plus"></i>
+                                Add Device
+                            </button>
+                            <button class="action-btn tertiary" onclick="loadPage('centers')">
+                                <i class="fas fa-map"></i>
+                                Find Centers
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
